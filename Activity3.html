@@ -1,0 +1,41 @@
+<html>
+<head>
+<h1> Match Summary</h1>
+</head>
+<body>
+<script type="text/javascript">
+var winningTeam;
+function WinCalculation()
+{
+<!-- document.write("1"); -->
+var scoreA=document.getElementById(scoreA).value;
+scoreA=scoreA.split('/')[0];
+var scoreB=document.getElementById(scoreB).value;
+scoreB=scoreB.split('/')[0];
+
+document.write("2");
+if(scoreA>scoreB)
+{
+winningTeam.innetHTML=document.getElementById(teamA).value;
+}
+else
+{
+winningTeam.innetHTML=document.getElementById(teamB).value;
+document.write("3");
+}
+}
+</script>
+
+<b> Team A</b><input id="teamA" placeholder="Team A"><br>
+<b> Team B</b><input id="teamB" placeholder="Team B"><br>
+<b> Date </b><input id="date" placeholder="DD/MM/YY"><br>
+<b> Time </b><input id="time" placeholder="HH:MM:SS"> <br>
+<b> Team A Score </b><input id="scoreA" placeholder="Runs/Wkts"><br>
+<b> Team B Score </b><input id="scoreB" placeholder="Runs/Wkts"><br>
+<button id="save" onclick="WinCalculation()">Save</button><br>
+
+
+<p>Winning Team :<br><span id="winningTeam"/></p>
+
+</body>
+</html>

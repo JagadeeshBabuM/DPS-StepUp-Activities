@@ -1,0 +1,27 @@
+<html>
+<head>
+
+<h1> Score Meter </h1>
+<b>(Enter the number of singles, doubles, triples, fours and sixes in comma separated format)</b><br><br><br><br>
+
+</head>
+<body>
+<script type="text/javascript">
+var totalScore;
+function CalculateScore()
+{
+var score=document.getElementById("score").value;
+score=score.split(',');
+totalScore=parseInt(score[0])*1+parseInt(score[1])*2+parseInt(score[2])*3+parseInt(score[3])*4+parseInt(score[4])*6;
+
+display_message.innerHTML= totalScore;
+
+}
+</script>
+<b>Enter the score details :</b><input id="score" type="text"><br>
+<button id="submitId" onclick="CalculateScore()">Get Score</button><br><br>
+	
+<p> Total Score<br> <span id = "display_message"></span> </p>
+
+</body>
+</html>

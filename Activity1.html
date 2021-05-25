@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type="text/javascript">
+function resultCalculation()
+{
+var sc1=document.getElementById("score1").value;
+sc1=parseInt(sc1.split('/')[0]);
+var sc2=document.getElementById("score2").value;
+var leadWickets= 10-parseInt(sc2.split('/')[1]);
+sc2=parseInt(sc2.split('/')[0]);
+var leadRuns=sc1-sc2;
+
+
+if(sc1>sc2)
+{
+document.write(document.getElementById("team1").value+ " WON by "+ leadRuns +" Runs.");
+}
+else
+{
+document.write(document.getElementById("team2").value+ " WON by"+leadWickets+" Wickets.");
+}
+
+}
+</script>
+</head>
+<body>
+<b>Enter the Team Name 1</b><input id="team1" placeholder="Enter team name"> 
+<b>Score 1</b><input id="score1" placeholder="score"> 
+<br>
+<b>Enter the Team Name 2</b><input id="team2" placeholder="Enter team name"><br>
+<b>Score 2</b><input id="score2" placeholder="score">
+<br>
+<button id="btn" onclick="resultCalculation()">Result</button>
+</body>
+</html>
